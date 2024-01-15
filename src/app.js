@@ -1,11 +1,10 @@
 'use strict';
 
 import express from 'express';
-const app = express();
-
 import swaggerUi from 'swagger-ui-express';
 import swaggerSpec from './swaggerSpec';
 
+const app = express();
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 import bodyParser from 'body-parser';
